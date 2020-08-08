@@ -15,7 +15,8 @@ class App extends Component {
         period: ''
       },
       displayMadlib: false,
-      madlibTemplate: ['This is a noun: ', '. This is an adjective: ', '. This is an adverb: ', '. This is a number: ', '. And this is a sentence: ', '.']
+      madlibTemplate: ['This is a noun: ', '. This is an adjective: ', '. This is an adverb: ', '. This is a number: ', '. And this is a sentence: ', '.'],
+      madlib: ''
     };
   }
 
@@ -45,7 +46,8 @@ class App extends Component {
     })
 
     const completeMadlib = generateMadlib.join('')
-    console.log(completeMadlib)
+    this.setState({madlib: completeMadlib})
+
     this.setState({displayMadlib: !this.state.displayMadlib})
   }
 
@@ -86,7 +88,7 @@ class App extends Component {
           </form>
             
           <button onClick={this.displayMadlib}>Click to display the madlib!</button>
-          {this.state.displayMadlib ? <Madlib /> : null}
+          {this.state.displayMadlib ? <Madlib propMadlib={this.state.madlib} /> : null}
         </main>
       </Fragment>
     );
