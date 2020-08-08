@@ -20,6 +20,9 @@ class Madlib extends Component {
             <h2>Here's your Madlib!</h2>
             <p>{this.props.propMadlib}</p>
             <button onClick={() => this.handleSave(this.props.propMadlib)}>Save Madlib!</button>
+            <form action="">
+               <input type="submit" value="Reset"/>
+            </form>
             <h2>Leaderboards!</h2>
             <Results />
          </section>
