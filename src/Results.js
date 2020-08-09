@@ -31,9 +31,7 @@ class Results extends Component {
       return(
          <ul>
             {
-               this.state.leaderboard.map( (madlib, key) => {
-                  return <li key={key}>{madlib}</li>
-               })
+               this.state.leaderboard.map( (madlib, index) =>  <li key={index}>{madlib}</li> )
             }
          </ul>
       )
