@@ -30,10 +30,10 @@ class App extends Component {
     });
   }
   
-  handleSubmit = (event) => {
-    console.log(this.state.usersWords)
-    event.preventDefault();
-  }
+  // handleSubmit = (event) => {
+  //   console.log(this.state.usersWords)
+  //   event.preventDefault();
+  // }
 
   displayMadlib = () => {
     const copyOfWords = Object.values(this.state.usersWords)

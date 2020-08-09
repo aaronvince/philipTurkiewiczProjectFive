@@ -5,7 +5,7 @@ import Results from './Results.js'
 class Madlib extends Component {
    constructor() {
       super()
-      this.state = {saveMadlib: ''}
+      // this.state = {saveMadlib: ''}
    }
 
    handleSave = (madlib) => {
